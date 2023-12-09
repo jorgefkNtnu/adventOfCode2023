@@ -3,7 +3,7 @@ const fs = require("fs");
 fs.readFile("input.txt", "utf8", (err, input) => {
   if (err) throw err;
 
-  let answer = input.split(/\r?\n/).reduce((acc, string, index) => {
+  let answer = input.split(/\r?\n/).reduce((acc, string) => {
     let array = string.replace(/^Game \d+: /, "").split(";");
 
     let red = 0;
